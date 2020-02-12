@@ -16,5 +16,10 @@ Route::prefix('v1')->name('api.v1')->group(function (){
     Route::get('version',function (){
         return "This is version v1";
     })->name('version');
+
+    // 用户注册
+    Route::post('users', 'UsersController@store')
+        ->name('users.store');
+
 });
 
